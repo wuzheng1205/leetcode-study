@@ -1,4 +1,4 @@
-package com.java.leetcode;
+package com.jax.study.leetcode.medium;
 
 import java.util.Arrays;
 

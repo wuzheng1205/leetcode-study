@@ -1,6 +1,4 @@
-package com.java.leetcode;
-
-import java.util.Arrays;
+package com.jax.study.leetcode.medium;
 
 /**
  * ID: 63

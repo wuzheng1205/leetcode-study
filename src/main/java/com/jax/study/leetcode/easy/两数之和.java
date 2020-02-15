@@ -1,4 +1,4 @@
-package com.java.leetcode;
+package com.jax.study.leetcode.easy;
 
 import com.jax.study.leetcode.util.PrintUtil;
 
