@@ -1,6 +1,4 @@
-package com.jax.study.leetcode.util;
-
-import lombok.Data;
+package com.jax.study.leetcode.model;
 
 /**
  * 单链表

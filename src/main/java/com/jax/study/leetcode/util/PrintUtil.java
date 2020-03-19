@@ -1,5 +1,7 @@
 package com.jax.study.leetcode.util;
 
+import com.jax.study.leetcode.model.ListNode;
+
 public class PrintUtil {
 
     /**

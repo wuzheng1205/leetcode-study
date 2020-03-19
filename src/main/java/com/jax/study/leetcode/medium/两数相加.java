@@ -1,6 +1,6 @@
 package com.jax.study.leetcode.medium;
 
-import com.jax.study.leetcode.util.ListNode;
+import com.jax.study.leetcode.model.ListNode;
 import com.jax.study.leetcode.util.PrintUtil;
 
 /**
