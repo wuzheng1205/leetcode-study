@@ -1,4 +1,4 @@
-package com.jax.study.leetcode.easy;
+package com.jax.study.leetcode.medium;
 
 /**
  * ID: 365
