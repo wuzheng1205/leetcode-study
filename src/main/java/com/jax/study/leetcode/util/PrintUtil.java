@@ -18,7 +18,20 @@ public class PrintUtil {
             }
         }
         System.out.print("]");
+        System.out.println();
     }
+
+    /**
+     * 打印二维数组
+     *
+     * @param array 二维数组
+     */
+    public static void printArray(int[][] array) {
+        for (int[] arr2 : array) {
+            PrintUtil.printArray(arr2);
+        }
+    }
+
 
     /**
      * 打印链表
