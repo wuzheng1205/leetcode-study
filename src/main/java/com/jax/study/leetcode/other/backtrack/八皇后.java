@@ -1,4 +1,4 @@
-package com.jax.study.leetcode.other;
+package com.jax.study.leetcode.other.backtrack;
 
 public class 八皇后 {
 
