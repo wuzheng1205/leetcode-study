@@ -22,6 +22,23 @@ public class PrintUtil {
     }
 
     /**
+     * 打印数组
+     *
+     * @param array 数组
+     */
+    public static void printArray(Boolean[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+        System.out.println();
+    }
+
+    /**
      * 打印二维数组
      *
      * @param array 二维数组
