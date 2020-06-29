@@ -1,5 +1,7 @@
 package com.jax.study.leetcode.medium;
 
+import com.jax.study.leetcode.util.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,7 @@ public class MinimunTotal {
         triangle.add(Arrays.asList(3, 4));
         triangle.add(Arrays.asList(6, 5, 7));
         triangle.add(Arrays.asList(4, 1, 8, 3));
-        System.out.println(new MinimunTotal.Solution().minimumTotal(triangle));
+        System.out.println(new MinimunTotal.Solution().minimumTotal1(triangle));
     }
 
     private static class Solution {
@@ -54,7 +56,34 @@ public class MinimunTotal {
          * 自顶向下
          */
         public int minimumTotal1(List<List<Integer>> triangle) {
-            return 0;
+            int size = triangle.size();
+            if (size == 1) {
+                // 只有一行，直接返回顶点值
+                return triangle.get(0).get(0);
+            }
+            // 最后一行
+            List<Integer> lastLine = triangle.get(size - 1);
+            int[] dp = new int[lastLine.size()];
+            dp[0] = triangle.get(0).get(0);
+            for (int i = 0; i < size - 1; i++) { // 最后一行不用往下处理
+                List<Integer> nextLine = triangle.get(i+1);
+                int tmp = Integer.MAX_VALUE;
+                for (int j = 0; j < (i+1); j++) {
+                    int left = dp[j] + nextLine.get(j);
+                    int right = dp[j] + nextLine.get(j+1);
+                    dp[j] = Math.min(left, tmp);
+                    tmp = right;
+                    if (j == i) {
+                        dp[j+1] = right;
+                    }
+                }
+                PrintUtil.printArray(dp);
+            }
+            int min = Integer.MAX_VALUE;
+            for (int i = 0; i < dp.length; i++) {
+                min = Math.min(dp[i], min);
+            }
+            return min;
         }
 
     }
